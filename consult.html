@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a consultation — Saif Kabeer</title>
+<meta name="description" content="Book a one to one 30 minute consultation with Saif Kabeer on business and personal finance.">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saifkabeer.com/consult">
+<meta property="og:title" content="Book a consultation — Saif Kabeer">
+<meta property="og:description" content="A one to one 30 minute call on business and personal finance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saifkabeer.com/consult">
+<meta property="og:image" content="https://saifkabeer.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book a consultation — Saif Kabeer">
+<meta name="twitter:description" content="A one to one 30 minute call on business and personal finance.">
+<meta name="twitter:image" content="https://saifkabeer.com/og.jpg">
+<link rel="icon" type="image/jpeg" href="profile.jpg">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#050505;
+  --card-bg:#111111;
+  --text:#f5f5f5;
+  --muted:#a0a0a0;
+  --accent:#53b2ff;
+  --border-subtle:#2a2a2a;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  padding:0;
+  background:radial-gradient(circle at top left, #1f1f1f 0, #050505 42%);
+  background-attachment:fixed;
+  color:var(--text);
+  font-family:-apple-system, BlinkMacSystemFont, system-ui, "SF Pro Text", "Inter", sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+main{
+  max-width:900px;
+  margin:40px auto 80px auto;
+  padding:0 16px;
+}
+
+.card{
+  background:var(--card-bg);
+  border-radius:20px;
+  padding:32px 32px 40px;
+  border:1px solid var(--border-subtle);
+  box-shadow:0 24px 80px rgba(0,0,0,.65);
+}
+
+.back{
+  display:inline-block;
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  margin-bottom:24px;
+  border-bottom:1px solid transparent;
+}
+.back:hover{color:var(--text)}
+
+h1{
+  font-size:32px;
+  letter-spacing:.01em;
+  margin:0 0 6px;
+}
+.sub{
+  color:var(--muted);
+  font-size:16px;
+  margin:0 0 4px;
+}
+
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 14px;
+  margin:20px 0 0;
+}
+.pill{
+  font-size:14px;
+  color:var(--text);
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--border-subtle);
+  border-radius:999px;
+  padding:6px 14px;
+}
+.pill.price{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+section{margin-top:34px}
+h2{
+  font-size:18px;
+  margin:0 0 10px;
+}
+ul{margin:0 0 0 20px;padding:0}
+li{margin-bottom:7px;font-size:15px}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid rgba(83,178,255,.35);
+  padding-bottom:1px;
+}
+a:hover{border-bottom-color:rgba(83,178,255,.9)}
+
+/* payment step */
+.pay{
+  margin-top:34px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border-subtle);
+  border-radius:14px;
+  padding:22px 22px 24px;
+}
+.pay h2{margin-top:0}
+.paynum{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:14px 0 4px;
+}
+.paynum .num{
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+.paynum .tag{
+  font-size:13px;
+  color:var(--muted);
+  border:1px solid var(--border-subtle);
+  border-radius:6px;
+  padding:3px 8px;
+}
+.copy{
+  cursor:pointer;
+  background:var(--accent);
+  color:#04121f;
+  border:0;
+  border-radius:8px;
+  font:inherit;
+  font-size:14px;
+  font-weight:600;
+  padding:7px 14px;
+}
+.copy:active{opacity:.8}
+.copied{color:var(--accent);font-size:13px;margin-left:4px;opacity:0;transition:opacity .2s}
+.copied.on{opacity:1}
+.paynote{font-size:14px;color:var(--muted);margin:12px 0 0}
+
+/* booking step */
+.step-label{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;height:22px;
+  border-radius:50%;
+  background:var(--accent);
+  color:#04121f;
+  font-size:13px;
+  font-weight:700;
+  margin-right:8px;
+}
+.calendly-inline-widget{
+  border-radius:12px;
+  overflow:hidden;
+  margin-top:14px;
+  background:#fff;
+}
+
+.foot{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid var(--border-subtle);
+  color:var(--muted);
+  font-size:13px;
+}
+
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+@media (max-width:600px){
+  .card{padding:24px 20px 32px}
+  h1{font-size:26px}
+}
+</style>
+</head>
+<body>
+  <main>
+    <article class="card">
+
+      <a class="back" href="/">&larr; saifkabeer.com</a>
+
+      <h1>Book a consultation</h1>
+      <p class="sub">A one to one call on business and personal finance, for people starting out.</p>
+
+      <div class="meta">
+        <span class="pill">30 minutes</span>
+        <span class="pill">One to one, over video</span>
+        <span class="pill price">5,000 BDT</span>
+      </div>
+
+      <section>
+        <h2>Who this is for</h2>
+        <ul>
+          <li>You are early in building a business or getting your personal finances in order.</li>
+          <li>You have specific questions and want a straight answer, not a course.</li>
+          <li>You want to leave the call with clear next steps you can act on.</li>
+        </ul>
+      </section>
+
+      <div class="pay">
+        <h2><span class="step-label">1</span>Pay to confirm your slot</h2>
+        <p class="sub" style="margin-top:6px">Send 5,000 BDT via bKash, Send Money, to the number below. Booking is confirmed once payment is received.</p>
+        <div class="paynum">
+          <span class="num" id="bkash">01305643235</span>
+          <span class="tag">bKash personal</span>
+          <button class="copy" id="copyBtn" type="button">Copy number</button>
+          <span class="copied" id="copied">copied</span>
+        </div>
+        <p class="paynote">Please keep your bKash transaction ID. Add it in the notes when you book, or send it to <a href="mailto:saifkabeer14@gmail.com">saifkabeer14@gmail.com</a> if the booking form does not ask.</p>
+      </div>
+
+      <section>
+        <h2><span class="step-label">2</span>Pick a time</h2>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/saifkabeer/30min" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </section>
+
+      <p class="foot">Questions before booking? Email <a href="mailto:saifkabeer14@gmail.com">saifkabeer14@gmail.com</a>.</p>
+
+    </article>
+  </main>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('copyBtn');
+      var num = document.getElementById('bkash').textContent.trim();
+      var flag = document.getElementById('copied');
+      btn.addEventListener('click', function(){
+        var done = function(){
+          flag.classList.add('on');
+          btn.textContent = 'Copied';
+          setTimeout(function(){ flag.classList.remove('on'); btn.textContent = 'Copy number'; }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(num).then(done, done);
+        } else {
+          var t = document.createElement('textarea');
+          t.value = num; document.body.appendChild(t); t.select();
+          try { document.execCommand('copy'); } catch(e){}
+          document.body.removeChild(t); done();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
