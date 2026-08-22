@@ -130,39 +130,6 @@ a:hover{border-bottom-color:rgba(83,178,255,.9)}
   padding:22px 22px 24px;
 }
 .pay h2{margin-top:0}
-.paynum{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin:14px 0 4px;
-}
-.paynum .num{
-  font-size:22px;
-  font-weight:600;
-  letter-spacing:.02em;
-}
-.paynum .tag{
-  font-size:13px;
-  color:var(--muted);
-  border:1px solid var(--border-subtle);
-  border-radius:6px;
-  padding:3px 8px;
-}
-.copy{
-  cursor:pointer;
-  background:var(--accent);
-  color:#04121f;
-  border:0;
-  border-radius:8px;
-  font:inherit;
-  font-size:14px;
-  font-weight:600;
-  padding:7px 14px;
-}
-.copy:active{opacity:.8}
-.copied{color:var(--accent);font-size:13px;margin-left:4px;opacity:0;transition:opacity .2s}
-.copied.on{opacity:1}
 .paynote{font-size:14px;color:var(--muted);margin:12px 0 0}
 
 /* booking step */
@@ -226,52 +193,25 @@ a:hover{border-bottom-color:rgba(83,178,255,.9)}
         <p class="honest">One thing to be upfront about: I will not be sharing secret knowledge. Almost everything I know, I post for free on my <a href="https://www.youtube.com/@saifkabeer_" target="_blank" rel="noopener">YouTube</a> and <a href="https://www.instagram.com/saifkabeer_/" target="_blank" rel="noopener">Instagram</a>. What you pay for here is my time and attention on your specific situation: your questions, numbers and your next move. If you would rather learn it yourself for free, please do, start with the videos.</p>
       </section>
 
-      <div class="pay">
-        <h2><span class="step-label">1</span>Pay to confirm your slot</h2>
-        <p class="sub" style="margin-top:6px">Send 5,000 BDT via bKash, Send Money, to the number below. Booking is confirmed once payment is received.</p>
-        <div class="paynum">
-          <span class="num" id="bkash">01305643235</span>
-          <span class="tag">bKash personal</span>
-          <button class="copy" id="copyBtn" type="button">Copy number</button>
-          <span class="copied" id="copied">copied</span>
-        </div>
-        <p class="paynote">Please keep your bKash transaction ID. Add it in the notes when you book, or send it to <a href="mailto:saifkabeer14@gmail.com">saifkabeer14@gmail.com</a> if the booking form does not ask.</p>
-      </div>
-
       <section>
-        <h2><span class="step-label">2</span>Pick a time</h2>
+        <h2><span class="step-label">1</span>Pick a time</h2>
+        <p class="sub" style="margin:6px 0 0">Choose a slot that works for you. Nothing is charged here.</p>
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/saifkabeer/30min" style="min-width:320px;height:700px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <!-- Calendly inline widget end -->
       </section>
 
+      <div class="pay">
+        <h2><span class="step-label">2</span>Payment</h2>
+        <p class="sub" style="margin-top:6px">Once you have booked, I will email you the payment details. Your slot is confirmed as soon as the payment comes through, and I will send the call link to the same address.</p>
+        <p class="paynote">The fee is 5,000 BDT, payable by bKash. If you need to reschedule, just reply to that email.</p>
+      </div>
+
       <p class="foot">Questions before booking? Email <a href="mailto:saifkabeer14@gmail.com">saifkabeer14@gmail.com</a>.</p>
 
     </article>
   </main>
 
-  <script>
-    (function(){
-      var btn = document.getElementById('copyBtn');
-      var num = document.getElementById('bkash').textContent.trim();
-      var flag = document.getElementById('copied');
-      btn.addEventListener('click', function(){
-        var done = function(){
-          flag.classList.add('on');
-          btn.textContent = 'Copied';
-          setTimeout(function(){ flag.classList.remove('on'); btn.textContent = 'Copy number'; }, 1800);
-        };
-        if (navigator.clipboard && navigator.clipboard.writeText){
-          navigator.clipboard.writeText(num).then(done, done);
-        } else {
-          var t = document.createElement('textarea');
-          t.value = num; document.body.appendChild(t); t.select();
-          try { document.execCommand('copy'); } catch(e){}
-          document.body.removeChild(t); done();
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
