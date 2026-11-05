@@ -372,6 +372,7 @@ a:focus-visible,
         </div>
       </header>
 
+      <nav aria-label="Main navigation" style="display:flex;gap:24px;margin:0 0 28px;font-size:14px"><a href="/" aria-current="page">About</a><a href="/roadmap/">The Roadmap ↗</a><a href="/consult">Consultations</a></nav>
       <section>
         <h2>Work</h2>
         <ul>
@@ -435,6 +436,12 @@ a:focus-visible,
         </ul>
       </section>
 
+      <section aria-labelledby="roadmap-heading" style="padding:24px;border:1px solid var(--border-subtle);border-radius:12px">
+        <h2 id="roadmap-heading">The Roadmap</h2>
+        <p style="color:var(--muted);font-size:15px">Businesses to build. Places to go. Things to learn. An evolving record of what comes next.</p>
+        <div id="roadmap-teaser"></div>
+        <a href="/roadmap/">Explore the roadmap ↗</a>
+      </section>
       <section>
         <h2>Get in touch</h2>
         <ul>
@@ -462,5 +469,7 @@ a:focus-visible,
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "489f476c71f04688b7a26a16fc9d6811"}'></script>
 <!-- End Cloudflare Web Analytics -->
+<script type="module" src="/assets/roadmap-teaser.js"></script>
 </body>
 </html>
+
