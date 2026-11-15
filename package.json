@@ -1,13 +1,8 @@
 {
-  "name": "saif-kabeer-roadmap",
-  "version": "1.0.0",
+  "name": "saifkabeer-site",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
     "build": "node scripts/build.mjs"
-  },
-  "devDependencies": {
-    "@electric-sql/pglite": "0.5.15"
   }
 }

@@ -1,3 +1,0 @@
-import {publicItems} from '../lib/public-data.js';
-import {escapeHtml as e} from '../assets/roadmap-model.js';
-export default async function handler(req,res){res.setHeader('Cache-Control','private, no-store, max-age=0');res.setHeader('Content-Type','application/xml');try{const rows=await publicItems();const urls=['/','/consult','/roadmap/'].map(p=>`<url><loc>https://saifkabeer.com${p}</loc></url>`).join('')+rows.map(i=>`<url><loc>https://saifkabeer.com/roadmap/${e(i.slug)}</loc><lastmod>${new Date(i.updated_at).toISOString()}</lastmod></url>`).join('');res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);}catch{res.status(503).send('Unavailable');}}
